@@ -1,31 +1,32 @@
 #!/usr/bin/env bash
 
-# extract Java SE download from Oracle into this project's java
+# Extract Java SE download from Oracle into this project's java
 # folder then...
 # ln -s java/<extracted folder> java/default
 JAVA_HOME=java/default
 PATH=$JAVA_HOME/bin:$PATH
 
-# the app starts in the background and logs to nohup.out
-# and so we remove any old log
+# We start app using nohup so that the app will continue running
+# when we log out nohup logs any output to nohup.out and so we
+# remove any old nohup.out
 if [ -e "nohup.out" ]
 then
 	rm nohup.out
 fi
 
-# package the app ready for running in production
-# should add "clean" before "stage" if want to clean
+# Package the app ready for running in production
+# Should add "clean" before "stage" if want to clean
 ./activator stage
 if [ "$?" != "0" ]; then
 	echo "Could not stage app" 1>&2
 	exit 1
 fi
 
-# run in background using nohup (so we can log out without stopping it)
+# Run in background using nohup (so we can log out without stopping it)
 nohup ./target/universal/stage/bin/benfletcher-com -DapplyEvolutions.default=true &
 
 # nohup.out gets created a bit later so we'll sleep before we tail it
 sleep 2
 
-# can CTRL+C when we've seen enough
+# Can CTRL+C when we've seen enough
 tail -f nohup.out

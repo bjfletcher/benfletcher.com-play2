@@ -14,5 +14,6 @@ libraryDependencies ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "com.typesafe.play" %% "play-slick" % "0.8.0"
+  "com.typesafe.play" %% "play-slick" % "0.8.0",
+  "com.newrelic.agent.java" % "newrelic-agent" % "3.11.0"
 )

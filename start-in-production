@@ -23,7 +23,7 @@ if [ "$?" != "0" ]; then
 fi
 
 # Run in background using nohup (so we can log out without stopping it)
-nohup ./target/universal/stage/bin/benfletcher-com -DapplyEvolutions.default=true &
+nohup ./target/universal/stage/bin/benfletcher-com -DapplyEvolutions.default=true -javaagent:newrelic/newrelic.jar &
 
 # nohup.out gets created a bit later so we'll sleep before we tail it
 sleep 2

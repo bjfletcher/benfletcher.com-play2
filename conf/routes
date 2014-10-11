@@ -1,0 +1,14 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+#GET        /                                controllers.Application.index
+
+# Map static resources from the /public folder to the /assets URL path
+#GET        /assets/*file                    controllers.Assets.at(path="/public", file)
+
+GET        /                                controllers.Default.redirect(to="/a-language-for-ben/")
+GET        /a-language-for-ben              controllers.Default.redirect(to="/a-language-for-ben/")
+GET        /a-language-for-ben/             controllers.Assets.at(path="/public/a-language-for-ben", file="index.html")
+GET        /a-language-for-ben/*file        controllers.Assets.at(path="/public/a-language-for-ben", file)

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>A Language for Ben film</title>
+    <meta name="description" content="About a young deaf child: how the introduction of a deaf adult helps the child, his family and the wider community learn the language that will change their lives." />
+    <meta name="author" content="Ben Fletcher" />
+    <meta property="og:url" content="http://benfletcher.com/a-language-for-ben-film/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="A Language for Ben film" />
+    <meta property="og:image" content="http://benfletcher.com/a-language-for-ben-film/a-language-for-ben.jpg" />
+    <meta property="og:description" content="About a young deaf child: how the introduction of a deaf adult helps the child, his family and the wider community learn the language that will change their lives." />
+    <meta property="fb:admins" content="bjfletcher" />
+    <style>
+        html, body {
+            position: relative;
+            height: 100%;
+            margin: 0;
+            background-color: #000;
+            color: #ddd;
+            font: normal normal normal 11px/14px 'Helvetica Neue',Arial,sans-serif; /* same as Tweet button */
+        }
+        a {
+            color: #fff;
+        }
+        .rainbow > * {
+            position: relative;
+            float: left;
+            width: 14.28%;
+            height: 4px;
+        }
+        .red {
+            background-color: #ff0000;
+        }
+        .orange {
+            background-color: #ff8000;
+        }
+        .yellow {
+            background-color: #ffff00;
+        }
+        .green {
+            background-color: #008000;
+        }
+        .blue {
+            background-color: #0000ff;
+        }
+        .indigo {
+            background-color: #4b0082;
+        }
+        .violet {
+            background-color: #9400d3;
+        }
+        #floater {
+            float: left;
+            height: 50%;
+            margin-bottom: -320px;
+        }
+        #content {
+            clear: both;
+            position: relative;
+            width: 640px;
+            height: 480px;
+            margin: 0 auto;
+        }
+        .bar {
+            position: relative;
+        }
+        .social {
+            float: left;
+        }
+        .social > * {
+            float: left;
+            width: auto !important; /* overrides Facebook's 100% width */
+            margin-right: 5px;
+        }
+        .social > * {
+            vertical-align: top;
+        }
+        .note {
+            border-radius: 3px;
+            padding: 0 3px;
+            border: #800 solid 1px;
+            background-color: #600;
+            text-shadow: 0 -1px 0 #400;
+        }
+    </style>
+</head>
+<body>
+<!-- Facebook requirement -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=197277570397611"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+<!-- ends Facebook requirement -->
+<div class="rainbow">
+    <div class="red"></div>
+    <div class="orange"></div>
+    <div class="yellow"></div>
+    <div class="green"></div>
+    <div class="blue"></div>
+    <div class="indigo"></div>
+    <div class="violet"></div>
+</div>
+<div id="floater"></div>
+<div id="content">
+    <h1>A Language for Ben Film</h1>
+    <p>About the young deaf child Ben: how the introduction of a deaf adult helps him, his family and the wider community learn the language that will change their lives.</p>
+    <!--p class="note"><strong>I would like to dedicate this film to two extraordinary people. In later life both Ray and Judith became university lecturers, loved by students and colleagues alike for their warmth and compassion. Both recently died of cancer. They, through this film, will live on as shining examples to us all.</p-->
+    <video width="640" height="480" controls="controls" poster="a-language-for-ben.jpg">
+        <source src="a-language-for-ben.webm" type='video/webm;codecs="vp8, vorbis"' />
+        <source src="a-language-for-ben.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+        <object id="flashVideo" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="640" height="480">
+            <param name="movie" value="a-language-for-ben.swf" />
+            <param name="bgcolor" value="#000000" />
+            <!--[if !IE]>-->
+            <object type="application/x-shockwave-flash" data="a-language-for-ben.swf" width="640" height="480">
+            <!--<![endif]-->
+            <img src="a-language-for-ben.jpg" width="640" height="480" alt="A Language for Ben film" title="No video playback capabilities. Please try with a modern web browser." />
+            <!--[if !IE]>-->
+            </object>
+            <!--<![endif]-->
+        </object>
+    </video>
+    <div class="bar">
+        <div class="social">
+            <!-- Facebook buttons -->
+            <div class="fb-like" data-href="http://benfletcher.com/a-language-for-ben-film/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <!-- Twitter button -->
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="bjfletcher">Tweet</a>
+        </div>
+        <!-- Twitter requirement -->
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <!-- ends Twitter requirement -->
+    </div>
+</div>
+<script src="swfobject.js"></script>
+<script>
+    swfobject.registerObject("flashVideo", "9.0.0", "expressInstall.swf");
+</script>
+</body>
+</html>

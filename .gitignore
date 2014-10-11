@@ -22,3 +22,7 @@ a-language-for-ben.webm
 *h2.db
 *.lock.db
 *.trace.db
+
+# Java stuff
+/java/j*
+/java/default

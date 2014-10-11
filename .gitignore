@@ -13,5 +13,12 @@ dist
 /.project
 /RUNNING_PID
 /.settings
+
+# large videos
 a-language-for-ben.mp4
 a-language-for-ben.webm
+
+# H2 database files
+*h2.db
+*.lock.db
+*.trace.db
